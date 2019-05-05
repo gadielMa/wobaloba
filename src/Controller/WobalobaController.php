@@ -8,18 +8,17 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
-class wobalobaController {
-    
+class WobalobaController extends Controller {
     /*
      * @Route("/")
      * @Method({"GET"})
      */
     public function index() {
-        return new Response('<html><body>Hello</body></html>');
+        return $this->render('wobaloba/index.html.twig');
     }
 
 }
